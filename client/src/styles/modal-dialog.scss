@@ -1,0 +1,142 @@
+.modal-dialog {
+  .dialog-overlay {
+    position: fixed;
+    //top: -10%;
+    //left: -7%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .dialog-body {
+      background-color: white;
+      text-align: center;
+      color: #5d5656;
+      padding: 20px;
+      top: 25%;
+      transform-style: preserve-3d;
+      transition: all .8s;
+
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateY(-70deg);
+      transform: rotateY(-70deg);
+      -webkit-transition: all 1s;
+      opacity: 0;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+      overflow: hidden;
+      position: relative;
+      border-radius: 3px;
+      margin: auto;
+      max-width: 630px;
+      min-width: 320px;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      width: 100%;
+      pointer-events: auto;
+      background-clip: padding-box;
+      outline: 0;
+
+      .header-icon {
+        font-size: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .header {
+        width: 100%;
+        padding: 10px;
+        border-bottom: solid 1px white;
+        font-size: 18px;
+      }
+
+      .description {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .buttons {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+
+        .ok-btn {
+          border: 1px solid lightgray;
+          color: #5d5656;
+          background-color: transparent;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          padding: 5px 20px;
+          margin: 5px;
+          border-radius: 3px;
+        }
+
+        .action-button {
+          color: white;
+        }
+
+      }
+    }
+
+    .dialog-body.error-dialog {
+      border: 2px solid #E84445 !important;
+
+      .header-icon {
+        > i {
+          color: #E84445;
+        }
+      }
+
+      .action-button {
+        background-color: #E84445;
+      }
+    }
+
+    .dialog-body.warning-dialog {
+      border: 2px solid orange !important;
+
+      .header-icon {
+        > i {
+          color: orange;
+        }
+      }
+
+      .action-button {
+        background-color: orange;
+      }
+    }
+
+    .dialog-body.success-dialog {
+      border: 2px solid #37b358 !important;
+
+      .header-icon {
+        > i {
+          color: #37b358;
+        }
+      }
+
+      .action-button {
+        background-color: #37b358;
+      }
+
+    }
+  }
+
+  .show {
+    visibility: visible !important;
+
+    .dialog-body {
+      -webkit-transform: rotateY(0);
+      transform: rotateY(0);
+      opacity: 1;
+    }
+  }
+}

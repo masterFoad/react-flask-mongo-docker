@@ -1,0 +1,27 @@
+.upload_label {
+  font-size: 12px;
+  margin: 8px 0 4px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.button_class {
+  background: #61dafb;
+  background-color: #61dafb;
+}
+
+.fileContainer {
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  transition: all 0.3s ease-in;
+}

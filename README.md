@@ -7,3 +7,5 @@ docker-compose build
 docker-compose up -d
 
 4. go to localhost:8080
+
+done

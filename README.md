@@ -1,6 +1,9 @@
 # react-flask-mongo
-Boilerplate for a Docker Compose React + Flask + MongoDB app.
+1. go to server/config/prod_config.py
+2. set db_host = "mongo"
 
-Run with `docker-compose up`.
+3. run the following commands
+docker-compose build
+docker-compose up -d
 
-Hosts app at `localhost:5000` and api at `localhost:8080`.
+4. go to localhost:8080

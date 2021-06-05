@@ -1,0 +1,11 @@
+## Build the image
+#docker build -t pytorch .
+#
+## Run the image
+#docker run -p 3000:3000 --name pytorch -d pytorch
+#
+## Connect to the image
+#docker exec -it pytorch /bin/bash
+
+
+docker build -t pytorch . && docker run -p 3000:3000 --name pytorch -d pytorch && docker exec -it pytorch /bin/bash

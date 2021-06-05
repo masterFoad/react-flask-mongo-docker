@@ -9,3 +9,4 @@ client/yarn.lock
 server/env
 server/env-3
 server/venv/*
+server/venv*/*

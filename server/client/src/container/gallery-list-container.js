@@ -1,13 +1,14 @@
 import React from "react";
-import {updateGalleryCache} from "../actions/gallery-actions";
-import {isLoading} from "../actions/common-actions";
+import {setCanvasDimensions, updateGalleryCache} from "../actions/gallery-actions";
+import {isLoading, showDialog} from "../actions/common-actions";
 import {gallery_schema} from "../utils/json-validator"
-import {showDialog} from "../actions/common-actions";
 
 export const mapStateToProps = ({appState, galleryState}) => {
     return {
         imagesCache: galleryState.imagesCache,
-        isLoading: appState.isLoading
+        isLoading: appState.isLoading,
+        canvasHeight: galleryState.canvasHeight,
+        canvasWidth: galleryState.canvasWidth
     };
 };
 
@@ -42,6 +43,7 @@ export const mapDispatchToProps = (dispatch) => {
                 descriptionComponent: component,
                 onOkClick: () => onOkClick && onOkClick()
             }))
-        }
+        },
+        setCanvasDimensions: (width, height) => dispatch(setCanvasDimensions(width, height))
     }
 };

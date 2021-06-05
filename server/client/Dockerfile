@@ -17,5 +17,10 @@ COPY ./src ./src
 
 EXPOSE 5000
 
-CMD npm run build && serve -s build
+CMD npm run build
+COPY ./build ./build
+
+RUN cd / && cp -r ./client/build ./static/common/
+
+#CMD npm run build && serve -s build
 #CMD ["npm", "run", "start"]

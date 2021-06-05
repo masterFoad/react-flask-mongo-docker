@@ -5,6 +5,7 @@ import ModalDialog from "./components/modal-dialog";
 import BackdropSpinner from "./components/backdrop-spinner";
 import ImageGridList from "./components/gallery-list";
 import MainTabs from "./components/main-tabs";
+import Canvas from "./components/Canvas";
 
 function App() {
     return (
@@ -19,6 +20,11 @@ function App() {
                     index: 1,
                     label: "Gallery",
                     component: <ImageGridList/>
+                },
+                {
+                    index: 2,
+                    label: "Test",
+                    component: <Canvas/>
                 },
             ]}/>
 

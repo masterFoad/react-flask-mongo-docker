@@ -23,6 +23,7 @@ class ImageGridList extends Component {
 
 
     render() {
+        console.log(this.props)
         return (
             <div className={"root"}>
                 <GridList cellHeight={160} className={"gridList"} cols={1}>
@@ -33,7 +34,8 @@ class ImageGridList extends Component {
                                     title={tile.title}
                                     description={tile.description}
                                     path={tile.image_path.substring(1)}
-                                    polygon_path={tile.image_path_polygon.substring(1)}/>
+                                    polygon_path={tile.image_path_polygon.substring(1)
+                                    }/>
                             </Button>
                         </GridListTile>
                     ))}

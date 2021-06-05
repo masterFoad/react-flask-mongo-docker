@@ -1,7 +1,12 @@
 from flask_cors import CORS
 
-# db_host = "localhost"
-db_host = "mongo"
+current_env = "dev"
+# current_env = "prod"
+
+if current_env == 'dev':
+    db_host = "localhost"
+else:
+    db_host = "mongo"
 
 def init_config(app):
     app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 30
